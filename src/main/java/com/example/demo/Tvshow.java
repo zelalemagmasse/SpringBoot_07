@@ -9,6 +9,18 @@ public class Tvshow {
     @Min(1)
     private long id;
 
+    public long getBoxOffRecd() {
+        return BoxOffRecd;
+    }
+
+    public void setBoxOffRecd(long boxOffRecd) {
+        BoxOffRecd = boxOffRecd;
+    }
+
+    @NotNull
+    @Min(1)
+    private long BoxOffRecd;
+
     public void setId(long id) {
         this.id = id;
     }
@@ -43,14 +55,14 @@ public class Tvshow {
     }
 
     @NotNull
-    @Size (min=3, max=20)
+    @Size (min=3, max=100)
     private String name;
 
     @NotNull
-    @Size(min=3,max=10)
+    @Size(min=3,max=100)
     private String type;
 
     @NotNull
-    @Size(min=10,max=30)
+    @Size(min=10,max=300)
     private String description;
 }
